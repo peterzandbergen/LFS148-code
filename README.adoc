@@ -1,0 +1,18 @@
+= Test
+Peter Zandbergen <peter.zandbergen@myhops.com>
+:toc:
+
+== Notes for the course
+
+* https://forum.linuxfoundation.org/categories/lfs148-class-forum[Class Forum]
+* http://trainingsupport.linuxfoundation.org/[Support System]
+* https://static.googleusercontent.com/media/research.google.com/nl//pubs/archive/36356.pdf[Dapper by Google]
+* https://opentelemetry.io/docs/specs/[OpenTelemetry Specification]
+
+== Why OpenTelemetry
+
+Items
+
+* Logs
+* Metrics
+* Traces
