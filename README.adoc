@@ -2,6 +2,10 @@
 Peter Zandbergen <peter.zandbergen@myhops.com>
 :toc:
 
+== Logbook
+
+https://trainingportal.linuxfoundation.org/learn/course/getting-started-with-opentelemetry-lfs148/hands-on-lab-automatic-instrumentation-and-instrumentation-libraries/exercise-2-code-based-instrumentation-for-java-python?page=1[Continue here]
+
 == Notes for the course
 
 * https://forum.linuxfoundation.org/categories/lfs148-class-forum[Class Forum]
