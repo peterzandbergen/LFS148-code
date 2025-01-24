@@ -6,8 +6,12 @@ import requests
 from client import ChaosClient, FakerClient
 from flask import Flask, make_response
 
+from trace_utils import create_tracer
+
 # global variables
 app = Flask(__name__)
+tracer = create_tracer("app.py", "0.1")
+
 
 @app.route("/users", methods=["GET"])
 def get_user():
@@ -27,6 +31,7 @@ def do_stuff():
 
 
 @app.route("/")
+@tracer.start_as_current_span("index")
 def index():
     do_stuff()
     current_time = time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
