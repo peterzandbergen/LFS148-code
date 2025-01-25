@@ -1,1 +1,0 @@
-# otel-manual-instrumentation-lab
