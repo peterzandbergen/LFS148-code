@@ -20,3 +20,57 @@ Items
 * Logs
 * Metrics
 * Traces
+
+== Exercise 2
+
+Run these commands to prepare for Python test
+
+[source,bash]
+----
+# Exercise 1
+export EXERCISES=/workspaces/LFS148-code/exercises
+cd automatic-instrumentation/initial/todobackend-springboot
+mvn clean package
+
+# Test the app
+// java -jar target/todobackend-0.0.1-SNAPSHOT.jar
+
+# Download the intrumentation lib
+curl -L -O https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.8.0/opentelemetry-javaagent.jar
+
+# Test app with instrumentation
+# Configure the otel intrumentation library
+export OTEL_TRACES_EXPORTER=console
+export OTEL_METRICS_EXPORTER=none
+export OTEL_LOGS_EXPORTER=none
+# Start the app
+java -javaagent:./opentelemetry-javaagent.jar -jar target/todobackend-0.0.1-SNAPSHOT.jar
+
+# Run Jaeger
+docker run -d --name jaeger \
+  -e COLLECTOR_OTLP_ENABLED=true \
+  -p 16686:16686 \
+  -p 14268:14268 \
+  -p 4317:4317 \
+  -p 4318:4318 \
+  jaegertracing/all-in-one
+
+export EXERCISES=/workspaces/LFS148-code/exercises
+
+
+# Run the Java backend
+cd $EXERCISES/automatic-instrumentation/initial/todobackend-springboot
+
+mvn clean package
+
+# Download the intrumentation lib
+curl -L -O https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.8.0/opentelemetry-javaagent.jar
+
+# Run the application
+java -javaagent:./opentelemetry-javaagent.jar -jar target/todobackend-0.0.1-SNAPSHOT.jar
+
+cd $EXERCISES/manual-instrumentation-traces
+
+
+
+----
