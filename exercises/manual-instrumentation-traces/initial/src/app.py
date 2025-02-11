@@ -11,6 +11,10 @@ from trace_utils import create_tracer
 from opentelemetry import trace as trace_api
 from opentelemetry.semconv.trace import SpanAttributes
 
+import json
+
+from opentelemetry.propagate import inject
+
 # global variables
 app = Flask(__name__)
 tracer = create_tracer("app.py", "0.1")
@@ -29,8 +33,15 @@ def get_user():
 @tracer.start_as_current_span("do_stuff")
 def do_stuff():
     time.sleep(0.1)
+    headers = {}
+    inject(headers)
     url = "http://localhost:6000/"
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
+    
+    # debug
+    print("Headers included in outbound request:")
+    print(json.dumps(response.json()["request"]["headers"], indent=2))
+    
     return response
 
 
