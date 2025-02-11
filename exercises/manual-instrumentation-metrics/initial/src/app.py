@@ -4,7 +4,7 @@ import time
 
 import requests
 from client import ChaosClient, FakerClient
-from flask import Flask, make_response, request
+from flask import Flask, make_response, request, Response
 
 # custom
 from metric_utils import create_meter, create_request_instruments
@@ -12,6 +12,30 @@ from metric_utils import create_meter, create_request_instruments
 # global variables
 app = Flask(__name__)
 meter = create_meter("app.py", "0.1")
+
+
+@app.before_request
+def before_request_func():
+    request_instruments["traffic_volume"].add(
+        1,
+        attributes={
+            "http.route": request.path,
+            "http.method": request.method,
+        },
+    )
+
+
+@app.after_request
+def after_request_func(response: Response) -> Response:
+    # ...
+    request_instruments["error_rate"].add(
+        1,
+        {
+            "http.route": request.path,
+            "state": "success" if response.status_code < 400 else "fail",
+        },
+    )
+    return response
 
 
 @app.route("/users", methods=["GET"])
@@ -33,7 +57,6 @@ def do_stuff():
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    request_instruments["index_counter"].add(1, {"http.request.method": request.method})
     do_stuff()
     current_time = time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime())
     return f"Hello, World! It's currently {current_time}"
