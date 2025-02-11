@@ -13,14 +13,30 @@ from opentelemetry.semconv.trace import SpanAttributes
 
 import json
 
-from opentelemetry.propagate import inject
+from opentelemetry.propagate import inject, extract
+
+from opentelemetry import context
 
 # global variables
 app = Flask(__name__)
 tracer = create_tracer("app.py", "0.1")
 
+@app.teardown_request
+def teardown_request_func(err):
+    previous_ctx = request.environ.get("previous_ctx_token", None)
+    if previous_ctx:
+        context.detach(previous_ctx)
+
+
+@app.before_request
+def before_request_func():
+    ctx = extract(request.headers)    
+    previous_ctx = context.attach(ctx)
+    request.environ["previous_ctx_token"] = previous_ctx
+    
 
 @app.route("/users", methods=["GET"])
+@tracer.start_as_current_span("users")
 def get_user():
     user, status = db.get_user(123)
     data = {}
