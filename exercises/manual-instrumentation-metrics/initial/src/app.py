@@ -23,17 +23,30 @@ def before_request_func():
             "http.method": request.method,
         },
     )
+    request.environ["request_start"] = time.time_ns()
 
 
 @app.after_request
 def after_request_func(response: Response) -> Response:
     # ...
+    request_end = time.time_ns()
+    duration = (request_end - request.environ["request_start"]) / 1_000_000_000
+    
     request_instruments["error_rate"].add(
         1,
         {
             "http.route": request.path,
             "state": "success" if response.status_code < 400 else "fail",
         },
+    )
+    
+    request_instruments["request_latency"].record(
+        duration,
+        attributes = {
+            "http.request.method": request.method,
+            "http.route": request.path,
+            "http.response.status_code": response.status_code,
+        }
     )
     return response
 
