@@ -11,7 +11,7 @@ from opentelemetry import metrics as metric_api
 # OTel SDK
 from opentelemetry.sdk.metrics import MeterProvider
 
-
+import psutil
 
 def create_metrics_pipeline(export_interval: int) -> MetricReader:
     console_exporter = ConsoleMetricExporter()
@@ -59,4 +59,23 @@ def create_request_instruments(meter: metric_api.Meter) -> dict:
         "error_rate": error_rate,
         "request_latency": request_latency,
     }
+    return instruments
+
+
+def get_cpu_utilization(opt: metric_api.CallbackOptions) -> metric_api.Observation:
+    cpu_util = psutil.cpu_percent(interval=None) / 100
+    yield metric_api.Observation(cpu_util)
+    
+def create_resource_instruments(meter: metric_api.Meter) -> dict:
+    cpu_util_gauge = meter.create_observable_gauge(
+        name="process.cpu.utilization",
+        callbacks=[get_cpu_utilization],
+        unit="1",
+        description="CPU utilization since last call",
+    )
+    
+    instruments = {
+        "cpu_utilization": cpu_util_gauge,
+    }
+    
     return instruments

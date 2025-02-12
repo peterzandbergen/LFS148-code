@@ -6,8 +6,9 @@ import requests
 from client import ChaosClient, FakerClient
 from flask import Flask, make_response, request, Response
 
+import logging
 # custom
-from metric_utils import create_meter, create_request_instruments
+from metric_utils import create_meter, create_request_instruments, create_resource_instruments
 
 # global variables
 app = Flask(__name__)
@@ -76,6 +77,12 @@ def index():
 
 
 if __name__ == "__main__":
+    # Disable logging for load test
+    logging.getLogger("werkzeug").disabled = True
+    
+    # Intrumentation
     request_instruments = create_request_instruments(meter)
+    create_resource_instruments(meter)
+    
     db = ChaosClient(client=FakerClient())
     app.run(host="0.0.0.0", debug=True)
