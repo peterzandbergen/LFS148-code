@@ -1,0 +1,1298 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395065175983840,
+                                        "value": 3
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395065175983840,
+                                        "value": 3
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395065175983840,
+                                        "value": 3
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395065175983840,
+                                        "count": 3,
+                                        "sum": 0.330756912,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            3,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.109446232,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395068001350343,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395068001350343,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395068001350343,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395068001350343,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395073002891586,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395073002891586,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395073002891586,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395073002891586,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395078009651418,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395078009651418,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395078009651418,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395078009651418,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395083014480795,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395083014480795,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395083014480795,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395083014480795,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395088021403287,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395088021403287,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395088021403287,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395088021403287,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395093027478688,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395093027478688,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395093027478688,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395093027478688,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395096066358109,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395096066358109,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395096066358109,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395096066358109,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
+{
+    "resource_metrics": [
+        {
+            "resource": {
+                "attributes": {
+                    "telemetry.sdk.language": "python",
+                    "telemetry.sdk.name": "opentelemetry",
+                    "telemetry.sdk.version": "1.26.0",
+                    "host.name": "fb33ecef250f",
+                    "service.name": "app.py",
+                    "service.version": "0.1"
+                },
+                "schema_url": ""
+            },
+            "scope_metrics": [
+                {
+                    "scope": {
+                        "name": "app.py",
+                        "version": "0.1",
+                        "schema_url": "",
+                        "attributes": null
+                    },
+                    "metrics": [
+                        {
+                            "name": "traffic_volume",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {},
+                                        "start_time_unix_nano": 1739395061123798179,
+                                        "time_unix_nano": 1739395101072158869,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "description": "total volume of requests to an endpoint",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "http.method": "GET"
+                                        },
+                                        "start_time_unix_nano": 1739395061123821460,
+                                        "time_unix_nano": 1739395101072158869,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "error_rate",
+                            "description": "rate of failed requests",
+                            "unit": "request",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.route": "/",
+                                            "state": "success"
+                                        },
+                                        "start_time_unix_nano": 1739395061235610849,
+                                        "time_unix_nano": 1739395101072158869,
+                                        "value": 5
+                                    }
+                                ],
+                                "aggregation_temporality": 2,
+                                "is_monotonic": true
+                            }
+                        },
+                        {
+                            "name": "http.server.request.duration",
+                            "description": "latency for a request to be served",
+                            "unit": "s",
+                            "data": {
+                                "data_points": [
+                                    {
+                                        "attributes": {
+                                            "http.request.method": "GET",
+                                            "http.route": "/",
+                                            "http.response.status_code": 200
+                                        },
+                                        "start_time_unix_nano": 1739395061235739285,
+                                        "time_unix_nano": 1739395101072158869,
+                                        "count": 5,
+                                        "sum": 0.543355581,
+                                        "bucket_counts": [
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            5,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        ],
+                                        "explicit_bounds": [
+                                            0.005,
+                                            0.01,
+                                            0.025,
+                                            0.05,
+                                            0.075,
+                                            0.1,
+                                            0.25,
+                                            0.5,
+                                            0.75,
+                                            1,
+                                            2.5,
+                                            5,
+                                            7.5,
+                                            10
+                                        ],
+                                        "min": 0.105330512,
+                                        "max": 0.111739602
+                                    }
+                                ],
+                                "aggregation_temporality": 2
+                            }
+                        }
+                    ],
+                    "schema_url": ""
+                }
+            ],
+            "schema_url": ""
+        }
+    ]
+}
